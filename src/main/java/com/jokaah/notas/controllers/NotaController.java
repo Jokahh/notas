@@ -25,12 +25,13 @@ public class NotaController {
 
     @GetMapping("/notas")
     List<Nota> all() {
-        return notaService.findAll();
+        List<Nota> listaNotas = notaService.findAll();
+        return listaNotas;
     }
 
     @GetMapping("/notas/buscar")
-    List<Nota> findPorTituloYFecha(@RequestParam(required = false) String titulo,
-            @RequestParam(required = false) @DateTimeFormat(pattern = "dd-MM-yyyy") Date fecha) {
+    List<Nota> findPorTituloYFecha(@RequestParam() String titulo,
+            @RequestParam() @DateTimeFormat(pattern = "dd-MM-yyyy") Date fecha) {
 
         return notaService.findPorTituloYFecha(titulo, fecha);
     }

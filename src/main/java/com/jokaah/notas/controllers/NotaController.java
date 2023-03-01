@@ -31,7 +31,7 @@ public class NotaController {
 
     @GetMapping("/notas/buscar")
     List<Nota> findPorTituloYFecha(@RequestParam() String titulo,
-            @RequestParam() @DateTimeFormat(pattern = "dd-MM-yyyy") Date fecha) {
+            @RequestParam() @DateTimeFormat(pattern = "dd/MM/yyyy") Date fecha) {
 
         return notaService.findPorTituloYFecha(titulo, fecha);
     }

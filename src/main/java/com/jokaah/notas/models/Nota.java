@@ -20,7 +20,7 @@ public class Nota {
     private String titulo;
 
     @Column(nullable = false)
-    @JsonFormat(pattern = "dd-MM-yyyy")
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private Date fecha;
 
     @Column(length = 1000, nullable = false)

@@ -17,8 +17,6 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jokaah.notas.models.Credentials;
 
-import antlr.Token;
-
 public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 
     @Override
